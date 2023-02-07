@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/gray_lite"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/info_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_active"
+        android:minWidth="110dp"
+        android:minHeight="48dp"
+        android:padding="0dp"
+        android:text="@string/info"
+        android:textColor="@color/inac_btn_txt"
+        android:textSize="12sp"
+        android:onClick="personalInfo"
+        app:layout_constraintEnd_toStartOf="@id/edu_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edu_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:padding="0dp"
+        android:background="@drawable/button_inactive"
+        android:color="@color/white"
+        android:text="@string/edu"
+        android:textColor="@color/inac_btn_txt"
+        android:textSize="12sp"
+        android:onClick="eduction"
+        app:layout_constraintEnd_toStartOf="@id/image_button"
+        app:layout_constraintStart_toEndOf="@id/info_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/image_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:padding="0dp"
+        android:background="@drawable/button_inactive"
+        android:text="@string/img"
+        android:textColor="@color/inac_btn_txt"
+        android:textSize="12sp"
+        android:onClick="image"
+        app:layout_constraintEnd_toStartOf="@id/profile_button"
+        app:layout_constraintStart_toEndOf="@id/edu_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_inactive"
+        android:color="@color/white"
+        android:text="@string/profile"
+        android:textColor="@color/inac_btn_txt"
+        android:textSize="12sp"
+        android:onClick="profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/info_divider"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="?android:attr/listDivider"
+        android:color="#3F51B5"
+        app:layout_constraintEnd_toEndOf="@id/info_button"
+        app:layout_constraintStart_toStartOf="@id/info_button"
+        app:layout_constraintTop_toBottomOf="@id/info_button" />
+
+    <View
+        android:id="@+id/edu_divider"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@id/edu_button"
+        app:layout_constraintStart_toStartOf="@id/edu_button"
+        app:layout_constraintTop_toBottomOf="@id/edu_button" />
+
+    <View
+        android:id="@+id/image_divider"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@id/image_button"
+        app:layout_constraintStart_toStartOf="@id/image_button"
+        app:layout_constraintTop_toBottomOf="@id/image_button" />
+
+    <View
+        android:id="@+id/profile_divider"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@id/profile_button"
+        app:layout_constraintStart_toStartOf="@id/profile_button"
+        app:layout_constraintTop_toBottomOf="@id/profile_button" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.profile.PersonalInformation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_divider"
+        tools:layout_editor_absoluteX="137dp"
+
+        tools:layout_editor_absoluteY="180dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

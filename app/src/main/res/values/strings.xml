@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Profile</string>
+    <string name="info">Personal Information</string>
+    <string name="edu">Education</string>
+    <string name="img">Add Image</string>
+    <string name="profile">Profile</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="father_name">Father Name</string>
+    <string name="gender">Gender</string>
+    <string name="c_number">Contact #</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="degree">Highest Degree</string>
+    <string name="grades">Grades</string>
+    <string name="year">Passing Year</string>
+    <string name="institute">Institute</string>
+    <string name="add_image">Add Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
